@@ -35,6 +35,7 @@ import { useStaticJsonRPC, useGasPrice } from "./hooks";
 const { ethers } = require("ethers");
 /*
     Welcome to 🏗 scaffold-eth !
+// medikeyproject
 
     Code:
     https://github.com/scaffold-eth/scaffold-eth
