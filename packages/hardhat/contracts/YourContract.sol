@@ -21,6 +21,27 @@ contract YourContract {
       emit SetPurpose(msg.sender, purpose);
   }
 
+// function setMessage(){
+//   ///  WHEN THE APPLE API READS HEART RATE OVER A CERTAIN AMOUNT THEN SEND A NOTIFICATION
+//   ///
+// }
+
+// function setUserInfo(){
+
+// //// patient information
+// /// use zkScroll to verify/only send certain info
+// }
+
+
+// how do i set when to deploy a contract? i want the contract do be deployed
+// and info sent BASED ON THE API INFORMATION
+
+
+
+
+
+
+
   // to support receiving ETH by default
   receive() external payable {}
   fallback() external payable {}

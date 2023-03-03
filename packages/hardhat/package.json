@@ -47,6 +47,8 @@
     "send": "hardhat send",
     "generate": "hardhat generate",
     "account": "hardhat account",
-    "verify": "hardhat verify"
+    "verify": "hardhat verify",
+    "deploy:hh": "npx hardhat run --network hardhat ./deploy/00_deploy_your_contract.js",
+    "deploy:scrollTestnet": "npx hardhat run --network scrollTestnet ./deploy/00_deploy_your_contract.js"
   }
 }
