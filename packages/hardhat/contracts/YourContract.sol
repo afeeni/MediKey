@@ -8,8 +8,9 @@ import "hardhat/console.sol";
 contract YourContract {
 
   event SetPurpose(address sender, string purpose);
+  //event Value(address sender, string value);
 
-  string public purpose = "Building Unstoppable Apps!!!";
+  string public purpose = "Live information!";
 
   constructor() payable {
     // what should we do on deploy?
@@ -20,6 +21,30 @@ contract YourContract {
       console.log(msg.sender,"set purpose to",purpose);
       emit SetPurpose(msg.sender, purpose);
   }
+
+
+
+
+
+
+  // function setValue(string memory newValue) public payable {
+  //     value = newValue;
+  //     console.log(msg.sender,"set heartrate value to",value);
+  //     emit SetValue(msg.sender, value);
+  // }
+
+// contract YourContract{
+
+  
+
+
+  // function setValue(string memory newPurpose) public payable {
+  //     purpose = newPurpose;
+  //     console.log(msg.sender,"set purpose to",purpose);
+  //     emit SetPurpose(msg.sender, purpose);
+  // }
+
+
 
 // function setMessage(){
 //   ///  WHEN THE APPLE API READS HEART RATE OVER A CERTAIN AMOUNT THEN SEND A NOTIFICATION
@@ -43,6 +68,6 @@ contract YourContract {
 
 
   // to support receiving ETH by default
-  receive() external payable {}
-  fallback() external payable {}
+  //receive() external payable {}
+  //fallback() external payable {}
 }

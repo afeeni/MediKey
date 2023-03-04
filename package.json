@@ -55,7 +55,7 @@
     "postinstall": "husky install",
     "prepare": "husky install",
     "deploy:hh": "npx hardhat run --network hardhat .packages/hardhat/deploy/00_deploy_your_contract.js",
-    "deploy:scrollTestnet": "npx hardhat run --network scrollTestnet .packages/hardhat/deploy/00_deploy_your_contract.js"
+    "deploy:scrollTestnet": "npx hardhat run --network scrollTestnet ../hardhat/deploy/00_deploy_your_contract.js"
   },
   "workspaces": {
     "packages": [

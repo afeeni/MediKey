@@ -367,6 +367,7 @@ function App(props) {
             writeContracts={writeContracts}
             readContracts={readContracts}
             purpose={purpose}
+            /// value={value}
           />
         </Route>
         <Route path="/mainnetdai">
