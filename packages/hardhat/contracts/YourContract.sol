@@ -10,7 +10,19 @@ contract YourContract {
   event SetPurpose(address sender, string purpose);
   //event Value(address sender, string value);
 
-  string public purpose = "Live information!";
+  string public purpose = "Information Type";
+  address public patient = 0xFd9134718c82bB8AAC90698B04beB8aab05b1DA7;
+  uint public heartrate = 1000; /// nonsensicle heart rate number to not be confused with an input
+  // address public provider =
+
+    // struct User{
+    //   address patient;
+    //   uint heartrate;
+    // }
+
+
+// we can also use zk rollup to verify the info from the iot
+// device is coming from the correct person?
 
   constructor() payable {
     // what should we do on deploy?
@@ -21,6 +33,8 @@ contract YourContract {
       console.log(msg.sender,"set purpose to",purpose);
       emit SetPurpose(msg.sender, purpose);
   }
+
+  // function setHeartRate
 
 
 
