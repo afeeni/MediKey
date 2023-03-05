@@ -7,32 +7,26 @@ import "hardhat/console.sol";
 
 contract YourContract {
 
-  event SetPurpose(address sender, string purpose);
-  //event Value(address sender, string value);
+  event SetPurpose(address sender, uint purpose);
 
-  string public purpose = "Information Type";
-  address public patient = 0xFd9134718c82bB8AAC90698B04beB8aab05b1DA7;
-  uint public heartrate = 1000; /// nonsensicle heart rate number to not be confused with an input
-  // address public provider =
+  unit public purpose = 100;
+  address public owner = 0xFd9134718c82bB8AAC90698B04beB8aab05b1DA7;
 
-    // struct User{
-    //   address patient;
-    //   uint heartrate;
-    // }
-
-
-// we can also use zk rollup to verify the info from the iot
-// device is coming from the correct person?
 
   constructor() payable {
     // what should we do on deploy?
   }
 
-  function setPurpose(string memory newPurpose) public payable {
+  function setPurpose(uint memory newPurpose) public payable {
       purpose = newPurpose;
-      console.log(msg.sender,"set purpose to",purpose);
+    //  console.log(msg.sender,"set purpose to",purpose);
       emit SetPurpose(msg.sender, purpose);
   }
+
+
+
+
+
 
   // function setHeartRate
 

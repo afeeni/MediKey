@@ -7,7 +7,6 @@ import { Address, Balance, Events } from "../components";
 
 export default function ExampleUI({
   purpose,
-  // rate,
   address,
   mainnetProvider,
   localProvider,
@@ -18,7 +17,6 @@ export default function ExampleUI({
   writeContracts,
 }) {
   const [newPurpose, setNewPurpose] = useState("loading...");
-  //onst [newRate, setRate] = useState("loading...");
 
   return (
     <div>
@@ -27,7 +25,7 @@ export default function ExampleUI({
       */}
       <div style={{ border: "1px solid #cccccc", padding: 16, width: 400, margin: "auto", marginTop: 64 }}>
         <h2>Live Health Information</h2>
-        <h4>Purpose: {purpose}</h4>
+        <h4>Heart Rate: {purpose}</h4>
         <Divider />
         <div style={{ margin: 8 }}>
           <Input
@@ -35,11 +33,6 @@ export default function ExampleUI({
               setNewPurpose(e.target.value);
             }}
           />
-          {/* <Input
-            onChange={e => {
-              setNewHR(e.target.value);
-            }}
-          /> */}
           <Button
             style={{ marginTop: 8 }}
             onClick={async () => {
@@ -60,6 +53,7 @@ export default function ExampleUI({
                   );
                 }
               });
+
               console.log("awaiting metamask/web3 confirm result...", result);
               console.log(await result);
             }}
