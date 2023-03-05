@@ -305,7 +305,7 @@ function App(props) {
         USE_NETWORK_SELECTOR={USE_NETWORK_SELECTOR}
       />
       <Menu style={{ textAlign: "center", marginTop: 20 }} selectedKeys={[location.pathname]} mode="horizontal">
-        <Menu.Item key="/">
+        {/* <Menu.Item key="/">
           <Link to="/">App Home</Link>
         </Menu.Item>
         <Menu.Item key="/debug">
@@ -313,16 +313,16 @@ function App(props) {
         </Menu.Item>
         <Menu.Item key="/hints">
           <Link to="/hints">Hints</Link>
-        </Menu.Item>
+        </Menu.Item> */}
         <Menu.Item key="/exampleui">
           <Link to="/exampleui">ExampleUI</Link>
         </Menu.Item>
-        <Menu.Item key="/mainnetdai">
+        {/* <Menu.Item key="/mainnetdai">
           <Link to="/mainnetdai">Mainnet DAI</Link>
         </Menu.Item>
         <Menu.Item key="/subgraph">
           <Link to="/subgraph">Subgraph</Link>
-        </Menu.Item>
+        </Menu.Item> */}
       </Menu>
 
       <Switch>
@@ -406,7 +406,7 @@ function App(props) {
 
       {/* 🗺 Extra UI like gas price, eth price, faucet, and support: */}
       <div style={{ position: "fixed", textAlign: "left", left: 0, bottom: 20, padding: 10 }}>
-        <Row align="middle" gutter={[4, 4]}>
+        {/* <Row align="middle" gutter={[4, 4]}>
           <Col span={8}>
             <Ramp price={price} address={address} networks={NETWORKS} />
           </Col>
@@ -428,7 +428,7 @@ function App(props) {
               Support
             </Button>
           </Col>
-        </Row>
+        </Row> */}
 
         <Row align="middle" gutter={[4, 4]}>
           <Col span={24}>

@@ -23,8 +23,8 @@ export default function Header({ link, title, subTitle, ...props }) {
   );
 }
 
-Header.defaultProps = {
-  link: "https://github.com/scaffold-eth/scaffold-eth",
-  title: "🏗 Scaffold-Eth",
-  subTitle: "Forkable Ethereum dev stack focused on fast product iteration",
-};
+// Header.defaultProps = {
+//   link: "https://github.com/scaffold-eth/scaffold-eth",
+//   title: "🏗 Scaffold-Eth",
+//   subTitle: "Forkable Ethereum dev stack focused on fast product iteration",
+// };
