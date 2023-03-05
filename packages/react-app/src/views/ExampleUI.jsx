@@ -28,7 +28,7 @@ export default function ExampleUI({
       <div style={{ border: "1px solid #cccccc", padding: 16, width: 400, margin: "auto", marginTop: 64 }}>
         <h2>Live Health Information</h2>
         <h4>Purpose: {purpose}</h4>
-        <h4>Heart rate:{rate}</h4>
+        <h4>{rate}</h4>
         <Divider />
         <div style={{ margin: 8 }}>
           <Input
@@ -94,7 +94,7 @@ export default function ExampleUI({
         startBlock={1}
       />
 
-      <div style={{ width: 600, margin: "auto", marginTop: 32, paddingBottom: 256 }}>
+      {/* <div style={{ width: 600, margin: "auto", marginTop: 32, paddingBottom: 256 }}>
         <Card>
           Check out all the{" "}
           <a
@@ -140,13 +140,13 @@ export default function ExampleUI({
 
           <div style={{ marginTop: 32 }}>
             <Progress percent={50} status="active" />
-          </div>
+          </div> */}
 
-          <div style={{ marginTop: 32 }}>
+      {/* <div style={{ marginTop: 32 }}>
             <Spin />
           </div>
-        </Card>
-      </div>
+        </Card> */}
+      {/* </div> */}
     </div>
   );
 }

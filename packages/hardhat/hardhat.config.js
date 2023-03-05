@@ -28,7 +28,7 @@ const { isAddress, getAddress, formatUnits, parseUnits } = utils;
 //
 // Select the network you want to deploy to here:
 //
-const defaultNetwork = "scrollTestnet";
+const defaultNetwork = "localhost";
 
 function mnemonic() {
   try {
@@ -77,6 +77,10 @@ module.exports = {
       url: process.env.SCROLL_TESTNET_URL || "",
       accounts: 
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+    },
+    polygon_mumbai: {
+      url: "https://rpc-mumbai.maticvigil.com",
+      accounts: [process.env.PRIVATE_KEY]
     },
     mainnet: {
       url: "https://mainnet.infura.io/v3/460f40a260564ac4a4f4b3fffb032dad", // <---- YOUR INFURA ID! (or it won't work)
@@ -322,6 +326,8 @@ module.exports = {
       rinkeby: "DNXJA8RX2Q3VZ4URQIWP7Z68CJXQZSC6AW",
       ropsten: "DNXJA8RX2Q3VZ4URQIWP7Z68CJXQZSC6AW",
       sepolia: "DNXJA8RX2Q3VZ4URQIWP7Z68CJXQZSC6AW",
+      polygon_mumbai: process.env.POLYGONSCAN_API_KEY,
+
       // add other network's API key here
       // might need to add scrolltestnet api key here or it may use goerli?
     },
