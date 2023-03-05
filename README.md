@@ -28,8 +28,8 @@ Cypher can be used to push notification to providers when there's something wron
 
 
 ## How To
-Deploy this application by running yarn deploy --network polygon_mumbai to use Polygon to deploy.
-Run yarn deploy —network scrollTestnet to use Scroll to deploy.
-Run npm run start to start Magic Wallet.
-Run npm start to run the React code.
+Deploy this application by running yarn deploy --network polygon_mumbai to use Polygon to deploy. <br />
+Run yarn deploy —network scrollTestnet to use Scroll to deploy. <br />
+Run npm run start to start Magic Wallet. <br />
+Run npm start to run the React code. <br />
 
