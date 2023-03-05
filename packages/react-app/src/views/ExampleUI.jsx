@@ -7,8 +7,7 @@ import { Address, Balance, Events } from "../components";
 
 export default function ExampleUI({
   purpose,
-  professional,
-  heartrate,
+  rate,
   address,
   mainnetProvider,
   localProvider,
@@ -19,7 +18,7 @@ export default function ExampleUI({
   writeContracts,
 }) {
   const [newPurpose, setNewPurpose] = useState("loading...");
-  const [newHR, setNewHR] = useState("loading...");
+  //const [newHR, setNewHR] = useState("loading...");
 
   return (
     <div>
@@ -29,7 +28,7 @@ export default function ExampleUI({
       <div style={{ border: "1px solid #cccccc", padding: 16, width: 400, margin: "auto", marginTop: 64 }}>
         <h2>Live Health Information</h2>
         <h4>Purpose: {purpose}</h4>
-        <h4>Heart rate:{heartrate}</h4>
+        <h4>Heart rate:{rate}</h4>
         <Divider />
         <div style={{ margin: 8 }}>
           <Input
@@ -37,17 +36,17 @@ export default function ExampleUI({
               setNewPurpose(e.target.value);
             }}
           />
-          <Input
+          {/* <Input
             onChange={e => {
               setNewHR(e.target.value);
             }}
-          />
+          /> */}
           <Button
             style={{ marginTop: 8 }}
             onClick={async () => {
               /* look how you call setPurpose on your contract: */
               /* notice how you pass a call back for tx updates too */
-              const result = tx(writeContracts.YourContract.setPurpose(newPurpose, newHR), update => {
+              const result = tx(writeContracts.YourContract.setPurpose(newPurpose), update => {
                 console.log("📡 Transaction Update:", update);
                 if (update && (update.status === "confirmed" || update.status === 1)) {
                   console.log(" 🍾 Transaction " + update.hash + " finished!");
@@ -62,21 +61,6 @@ export default function ExampleUI({
                   );
                 }
               });
-              // const result2 = tx(writeContracts.YourContract.set(newHR), update => {
-              //   console.log("📡 Transaction Update:", update);
-              //   if (update && (update.status === "confirmed" || update.status === 1)) {
-              //     console.log(" 🍾 Transaction " + update.hash + " finished!");
-              //     console.log(
-              //       " ⛽️ " +
-              //         update.gasUsed +
-              //         "/" +
-              //         (update.gasLimit || update.gas) +
-              //         " @ " +
-              //         parseFloat(update.gasPrice) / 1000000000 +
-              //         " gwei",
-              //     );
-              //   }
-              // });
               console.log("awaiting metamask/web3 confirm result...", result);
               console.log(await result);
             }}

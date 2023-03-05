@@ -1,5 +1,6 @@
 import { Button, Col, Divider, Input, Row, Tooltip } from "antd";
 import React, { useState } from "react";
+import { Address, Balance, Events } from "../../components";
 import Blockies from "react-blockies";
 
 import { Transactor } from "../../helpers";
@@ -14,7 +15,17 @@ const getFunctionInputKey = (functionInfo, input, inputIndex) => {
 
 const isReadable = fn => fn.stateMutability === "view" || fn.stateMutability === "pure";
 
-export default function FunctionForm({ contractFunction, functionInfo, provider, gasPrice, triggerRefresh }) {
+export default function FunctionForm({
+  contractFunction,
+  functionInfo,
+  provider,
+  gasPrice,
+  triggerRefresh,
+  mainnetProvider,
+  localProvider,
+  readContracts,
+  address,
+}) {
   const [form, setForm] = useState({});
   const [txValue, setTxValue] = useState();
   const [returnValue, setReturnValue] = useState();
@@ -114,53 +125,6 @@ export default function FunctionForm({ contractFunction, functionInfo, provider,
       </div>
     );
   });
-
-  const txValueInput = (
-    <div style={{ margin: 2 }} key="txValueInput">
-      <Input
-        placeholder="transaction value"
-        onChange={e => setTxValue(e.target.value)}
-        value={txValue}
-        addonAfter={
-          <div>
-            <Row>
-              <Col span={16}>
-                <Tooltip placement="right" title=" * 10^18 ">
-                  <div
-                    type="dashed"
-                    style={{ cursor: "pointer" }}
-                    onClick={async () => {
-                      const floatValue = parseFloat(txValue);
-                      if (floatValue) setTxValue("" + floatValue * 10 ** 18);
-                    }}
-                  >
-                    ✳️
-                  </div>
-                </Tooltip>
-              </Col>
-              <Col span={16}>
-                <Tooltip placement="right" title="number to hex">
-                  <div
-                    type="dashed"
-                    style={{ cursor: "pointer" }}
-                    onClick={async () => {
-                      setTxValue(BigNumber.from(txValue).toHexString());
-                    }}
-                  >
-                    #️⃣
-                  </div>
-                </Tooltip>
-              </Col>
-            </Row>
-          </div>
-        }
-      />
-    </div>
-  );
-
-  if (functionInfo.payable) {
-    inputs.push(txValueInput);
-  }
 
   const handleForm = returned => {
     if (returned) {
