@@ -7,9 +7,9 @@ import "hardhat/console.sol";
 
 contract YourContract {
 
-  event SetPurpose(address sender, uint purpose);
+  event SetPurpose(address sender, string purpose);
 
-  unit public purpose = 100;
+  string public purpose = "something";
   address public owner = 0xFd9134718c82bB8AAC90698B04beB8aab05b1DA7;
 
 
@@ -17,7 +17,7 @@ contract YourContract {
     // what should we do on deploy?
   }
 
-  function setPurpose(uint memory newPurpose) public payable {
+  function setPurpose(string memory newPurpose) public payable {
       purpose = newPurpose;
     //  console.log(msg.sender,"set purpose to",purpose);
       emit SetPurpose(msg.sender, purpose);
