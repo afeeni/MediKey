@@ -12,27 +12,34 @@ contract YourContract {
 
   string public purpose = "Information Type";
   address public patient = 0xFd9134718c82bB8AAC90698B04beB8aab05b1DA7;
-  uint public heartrate = 1000; /// nonsensicle heart rate number to not be confused with an input
-  // address public provider =
+  address public professional = 0xFd9134718c82bB8AAC90698B04beB8aab05b1DA7;
+  uint public heartrate = 100;
 
-    // struct User{
-    //   address patient;
-    //   uint heartrate;
-    // }
-
-
-// we can also use zk rollup to verify the info from the iot
-// device is coming from the correct person?
 
   constructor() payable {
     // what should we do on deploy?
   }
 
-  function setPurpose(string memory newPurpose) public payable {
+
+
+
+  function setPurpose(string memory newPurpose, uint newHeartRate) public payable {
       purpose = newPurpose;
-      console.log(msg.sender,"set purpose to",purpose);
+      heartrate = newHeartRate;
+      console.log(msg.sender,"set purpose to",purpose, heartrate);
       emit SetPurpose(msg.sender, purpose);
   }
+
+
+
+
+
+  // function setHeartRate(uint newHeartRate) public payable {
+  //     heartrate = newHeartRate;
+  //     console.log(msg.sender,"set heart rate to",heartrate);
+  //     //emit SetHeartRate(msg.sender, heartrate);
+  // }
+
 
   // function setHeartRate
 
