@@ -1,0 +1,10 @@
+.learn-more {
+  align-items: flex-start;
+  background-color: var(--white);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  min-height: 982px;
+  width: 1512px;
+}
+

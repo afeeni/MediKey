@@ -1,0 +1,13 @@
+.patient-form-page {
+  align-items: flex-end;
+  background: radial-gradient(50% 50% at 50% 50%, rgb(0, 63, 92) 0%, rgb(1, 31, 45) 100%);
+  background-color: rgba(255,255,255,1.0);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  min-height: 982px;
+  padding: 37px 48px;
+  width: 1512px;
+}
+
