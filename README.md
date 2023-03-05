@@ -4,7 +4,7 @@ Introducing MediKey, the digital health identity platform that securely transmit
 
 
 ### Scroll
-We’re usking ZKScrollup to process these transactions off chain, increasing patient information security, lowering costs, and in the future being able to verify patient information is correct, along with confirming identity especially when using IoT devices. We deploy using scroll due to their ease of use with EVM.
+We’re usking Scroll to process these transactions off chain, increasing patient information security, lowering costs, and in the future being able to verify patient information is correct, along with confirming identity especially when using IoT devices. We deploy using scroll due to their ease of use with EVM.
 
 
 
