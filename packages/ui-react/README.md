@@ -1,4 +1,4 @@
-# Anima exported react code
+# MediKey UI prototype - Anima exported React code
 
 This prototype was generated with the help [Anima App](https://www.animaapp.com).
 
