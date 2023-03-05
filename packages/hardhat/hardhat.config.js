@@ -28,7 +28,7 @@ const { isAddress, getAddress, formatUnits, parseUnits } = utils;
 //
 // Select the network you want to deploy to here:
 //
-const defaultNetwork = "localhost";
+const defaultNetwork = "polygon_mumbai";
 
 function mnemonic() {
   try {
@@ -326,7 +326,7 @@ module.exports = {
       rinkeby: "DNXJA8RX2Q3VZ4URQIWP7Z68CJXQZSC6AW",
       ropsten: "DNXJA8RX2Q3VZ4URQIWP7Z68CJXQZSC6AW",
       sepolia: "DNXJA8RX2Q3VZ4URQIWP7Z68CJXQZSC6AW",
-      polygon_mumbai: process.env.POLYGONSCAN_API_KEY,
+      polygon_mumbai: "55NHJGGU1PIXC68FYQH9KU7RWM1T76UMJZ",
 
       // add other network's API key here
       // might need to add scrolltestnet api key here or it may use goerli?

@@ -11,7 +11,7 @@ require("hardhat/config")
 
 module.exports = {
   solidity: {
-    version: "0.8.9",
+    version: "0.8.4",
     settings: {
       optimizer: {
         enabled: true,
@@ -29,7 +29,12 @@ module.exports = {
     url: "https://rpc-mumbai.maticvigil.com",
     accounts: [process.env.PRIVATE_KEY]
   },
-}
+},
+etherscan: {
+  apiKey: process.env.POLYGONSCAN_API_KEY
+    // add other network's API key here
+    // might need to add scrolltestnet api key here or it may use goerli?
+  },
 };
 
 
