@@ -27,5 +27,9 @@ We hope to use Chainlink Functions in the future to integrate with web2 applicat
 Cypher can be used to push notification to providers when there's something wrong with a patients vitals or records. Patients can also use this feautre to be notified when their health information is accessed. This created improved healthcare record security.
 
 
-
+## How To
+Deploy this application by running yarn deploy --network polygon_mumbai to use Polygon to deploy.
+Run yarn deploy —network scrollTestnet to use Scroll to deploy.
+Run npm run start to start Magic Wallet.
+Run npm start to run the React code.
 
