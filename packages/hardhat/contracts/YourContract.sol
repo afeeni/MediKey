@@ -9,7 +9,7 @@ contract YourContract {
 
   event SetPurpose(address sender, string purpose);
 
-  string public purpose = "something";
+  string public purpose = "default";
   address public owner = 0xFd9134718c82bB8AAC90698B04beB8aab05b1DA7;
 
 

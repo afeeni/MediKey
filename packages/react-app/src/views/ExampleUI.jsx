@@ -19,8 +19,10 @@ export default function ExampleUI({
   const [newPurpose, setNewPurpose] = useState("loading...");
 
   return (
+    // <div style={{ backgroundColor: "#003f5c" }}>
     <div>
       {/*
+      /// backgroundColor: "#003f5c"
         ⚙️ Here is an example UI that displays and sets the purpose in your smart contract:
       */}
       <div style={{ border: "1px solid #cccccc", padding: 16, width: 400, margin: "auto", marginTop: 64 }}>
@@ -78,6 +80,7 @@ export default function ExampleUI({
         📑 Maybe display a list of events?
           (uncomment the event and emit line in YourContract.sol! )
       */}
+
       <Events
         contracts={readContracts}
         contractName="YourContract"
