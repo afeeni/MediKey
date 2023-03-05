@@ -1,6 +1,6 @@
 # Anima exported react code
 
-This package was generated automatically with [Anima App](https://www.animaapp.com).
+This prototype was generated with the help [Anima App](https://www.animaapp.com).
 
 ## Instructions
 
