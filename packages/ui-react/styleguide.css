@@ -1,0 +1,23 @@
+:root { 
+  --alto: #d9d9d9;
+  --astronaut-blue: #013e5b;
+  --black: #000000;
+  --cultured-pearl: #f5f5f5;
+  --daintree: #011f2d;
+  --dawn-pink: #f0ebe6;
+  --falu-red: #8b1817;
+  --red-stage: #ca6500;
+  --screamin-green: #79f34f;
+  --web-orange: #ffa600;
+  --white: #ffffff;
+ 
+  --font-size-l: 24px;
+  --font-size-m: 20px;
+  --font-size-s: 17px;
+  --font-size-xl: 30px;
+  --font-size-xs: 16px;
+  --font-size-xxl: 32px;
+  --font-size-xxxl: 50px;
+ 
+  --font-family-inter: "Inter", Helvetica;
+}
