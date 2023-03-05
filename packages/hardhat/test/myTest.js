@@ -18,12 +18,12 @@ describe("My Dapp", function () {
 
     describe("setPurpose()", function () {
       it("Should be able to set a new purpose", async function () {
-        const newPurpose = "Test Purpose";
-        const newRate = 100;
+        const newPurpose = ["Test Purpose", 100];
+        // const newRate = 100;
         await myContract.setPurpose(newPurpose);
-        await myContract.setRate(newRate);
+        // await myContract.setRate(newRate);
         expect(await myContract.purpose()).to.equal(newPurpose);
-        expect(await myContract.rate()).to.equal(newRate);
+        // expect(await myContract.rate()).to.equal(newRate);
       });
 
       it("Should emit a SetPurpose event ", async function () {

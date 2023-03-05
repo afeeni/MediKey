@@ -7,7 +7,7 @@ import { Address, Balance, Events } from "../components";
 
 export default function ExampleUI({
   purpose,
-  rate,
+  // rate,
   address,
   mainnetProvider,
   localProvider,
@@ -18,7 +18,7 @@ export default function ExampleUI({
   writeContracts,
 }) {
   const [newPurpose, setNewPurpose] = useState("loading...");
-  //const [newHR, setNewHR] = useState("loading...");
+  //onst [newRate, setRate] = useState("loading...");
 
   return (
     <div>
@@ -28,7 +28,6 @@ export default function ExampleUI({
       <div style={{ border: "1px solid #cccccc", padding: 16, width: 400, margin: "auto", marginTop: 64 }}>
         <h2>Live Health Information</h2>
         <h4>Purpose: {purpose}</h4>
-        <h4>{rate}</h4>
         <Divider />
         <div style={{ margin: 8 }}>
           <Input
